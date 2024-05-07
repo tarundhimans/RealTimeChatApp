@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.EntityFrameworkCore;
 using RealTimeChatApp;
 using RealTimeChatApp.Data;
+using RealTimeChatApp.Hubb;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -50,5 +51,6 @@ app.MapControllerRoute(
     name: "default",
     pattern: "{area=Customer}/{controller=Home}/{action=Index}/{id?}");
 app.MapRazorPages();
+app.MapHub<ChatHub>("/chatHub");
 
 app.Run();

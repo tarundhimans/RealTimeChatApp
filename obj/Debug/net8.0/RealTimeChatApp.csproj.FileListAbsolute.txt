@@ -1121,3 +1121,4 @@ E:\New folder (2)\RealTimeChatApp\obj\Debug\net8.0\refint\RealTimeChatApp.dll
 E:\New folder (2)\RealTimeChatApp\obj\Debug\net8.0\RealTimeChatApp.pdb
 E:\New folder (2)\RealTimeChatApp\obj\Debug\net8.0\RealTimeChatApp.genruntimeconfig.cache
 E:\New folder (2)\RealTimeChatApp\obj\Debug\net8.0\ref\RealTimeChatApp.dll
+E:\New folder (2)\RealTimeChatApp\bin\Debug\net8.0\libman.json
