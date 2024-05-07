@@ -9603,11 +9603,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\ASP.NET MVC\\RealTimeChatApp\\RealTimeChatApp.csproj",
+      "projectUniqueName": "E:\\New folder (2)\\RealTimeChatApp\\RealTimeChatApp.csproj",
       "projectName": "RealTimeChatApp",
-      "projectPath": "E:\\ASP.NET MVC\\RealTimeChatApp\\RealTimeChatApp.csproj",
+      "projectPath": "E:\\New folder (2)\\RealTimeChatApp\\RealTimeChatApp.csproj",
       "packagesPath": "C:\\Users\\Madhu\\.nuget\\packages\\",
-      "outputPath": "E:\\ASP.NET MVC\\RealTimeChatApp\\obj\\",
+      "outputPath": "E:\\New folder (2)\\RealTimeChatApp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
