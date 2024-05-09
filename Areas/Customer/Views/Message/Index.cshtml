@@ -1,54 +1,117 @@
-﻿@model IEnumerable<RealTimeChatApp.Models.Message>
+﻿@model RealTimeChatApp.Models.Message
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1 class="text-center"> Live Chat</h1>
 
 <div class="container">
     <!-- User and Admin Indicators -->
     <div class="row p-1">
         <div class="col-6 text-end">
-            <span id="userStatus" style="color: red;">User: Not Logged In</span>
-        </div>
-    </div>
-
-    <div class="row p-1">
-        <div class="col-6 text-end">
-            <span id="adminStatus" style="color: red;">Admin: Not Logged In</span>
+            @if (User.Identity.IsAuthenticated)
+            {
+                if (User.IsInRole("Admin"))
+                {
+                    <span style="color: blue;">Admin: @User.Identity.Name</span>
+                }
+                else
+                {
+                    <span style="color: blue;">User: @User.Identity.Name</span>
+                }
+            }
+            else
+            {
+                <span style="color: red;">User: Not Logged In</span>
+            }
         </div>
     </div>
 
     <!-- Message Input Form -->
-    <div class="row p-1">
-        <div class="col-1">User</div>
-        <div class="col-5"><input type="text" id="userInput" /></div>
-    </div>
+    <form asp-action="SendMessage" method="post" enctype="multipart/form-data">
+        <div class="row p-1">
+            <div class="col-6">
+                <div class="row p-1 align-items-center">
+                    <div class="col-2">User</div>
+                    <div class="col-10">
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                            <input type="text" id="userInput" value="@User.Identity.Name" readonly style="filter: brightness(80%);" />
+                        }
+                        else
+                        {
+                            <input type="text" id="userInput" />
+                        }
+                    </div>
+                </div>
 
-    <div class="row p-1">
-        <div class="col-1">Message</div>
-        <div class="col-5"><input type="text" class="w-100" id="messageInput" /></div>
-    </div>
+                <div class="row p-1 align-items-center">
+                    <div class="col-2">Message</div>
+                    <div class="col-10"><input type="text" class="w-100" id="messageInput" name="message" /></div>
+                </div>
 
-    <div class="row p-1">
-        <div class="col-1">File</div>
-        <div class="col-5">
-            <input type="file" id="fileInput" />
+                <div class="row p-1 align-items-center">
+                    <div class="col-2">File</div>
+                    <div class="col-5">
+                        <input type="file" id="fileInput" name="file" /> 
+                    </div>
+                </div>
+
+                <div class="row p-1">
+                    <div class="col-12 text-end">
+                        <input type="submit" id="sendButton" value="Send Message" />
+                    </div>
+                </div>
+
+                <div class="row p-1">
+                    <div class="col-12">
+                        <hr />
+                    </div>
+                </div>
+
+                <!-- Message List -->
+                <div class="row p-1">
+                    <div class="col-12" style="height: 200px; overflow-y: auto;">
+                        <ul id="messagesList"></ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- All Users -->
+            <div class="col-6">
+                <div class="row p-1">
+                    <div class="col-12">
+                        <h4>All Users:</h4>
+                        <ul>
+                            @if (ViewBag.AllUsers != null)
+                            {
+                                foreach (var user in ViewBag.AllUsers)
+                                {
+                                    <li class="@(User.Identity.IsAuthenticated && User.Identity.Name == user.UserName ? "text-success" : "text-danger")">@user.UserName</li>
+                                }
+                            }
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
+    </form>
 
-    <div class="row p-1">
-        <div class="col-6 text-end">
-            <input type="button" id="sendButton" value="Send Message" />
-        </div>
-    </div>
-
-    <div class="row p-1">
-        <div class="col-6">
-            <hr />
-        </div>
-    </div>
-
-    <!-- Message List -->
-    <div class="row p-1">
-        <div class="col-6">
-            <ul id="messagesList"></ul>
-        </div>
+    <div class="col-12">
+        <h4>Shared Files:</h4>
+        <ul>
+            @foreach (var message in ViewBag.Files)
+            {
+                if (!string.IsNullOrEmpty(message.filepath))
+                {
+                    <li>
+                        File shared by @message.User.UserName:
+                        <a href="~/uploads/@message.filepath" download>@message.filepath</a>
+                    </li>
+                }
+            }
+        </ul>
     </div>
 </div>
 

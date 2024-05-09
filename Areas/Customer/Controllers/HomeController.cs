@@ -16,7 +16,13 @@ namespace RealTimeChatApp.Areas.Customer.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            if (!User.Identity.IsAuthenticated)
+            {
+               
+                return Redirect("/Identity/Account/Login");
+            }
+           
+            return View("Index");
         }
 
         public IActionResult Privacy()

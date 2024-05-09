@@ -20,3 +20,36 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+.marquee-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    margin-top: 20px; /* Adjust as needed */
+}
+
+.marquee {
+    width: 100%; /* Adjust as needed */
+    animation: marquee 15s linear infinite;
+    white-space: nowrap;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+    .marquee span {
+        display: inline-block;
+        padding-right: 100%;
+    }
+
+@keyframes marquee {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+

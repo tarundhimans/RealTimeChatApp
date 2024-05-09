@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace RealTimeChatApp.Models
 {
@@ -16,5 +17,8 @@ namespace RealTimeChatApp.Models
         public DateTime Timestamp { get; set; }
         public ApplicationUser User { get; set; }
         public string filepath { get; set; }
+        [NotMapped]
+        public IFormFile File { get; set; }
+        public byte[] FileBytes { get; set; }
     }
 }

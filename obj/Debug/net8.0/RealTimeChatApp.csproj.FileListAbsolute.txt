@@ -559,8 +559,19 @@ E:\ASP.NET MVC\RealTimeChatApp\obj\Debug\net8.0\refint\RealTimeChatApp.dll
 E:\ASP.NET MVC\RealTimeChatApp\obj\Debug\net8.0\RealTimeChatApp.pdb
 E:\ASP.NET MVC\RealTimeChatApp\obj\Debug\net8.0\RealTimeChatApp.genruntimeconfig.cache
 E:\ASP.NET MVC\RealTimeChatApp\obj\Debug\net8.0\ref\RealTimeChatApp.dll
+E:\New folder (2)\RealTimeChatApp\obj\Debug\net8.0\RealTimeChatApp.csproj.AssemblyReference.cache
+E:\New folder (2)\RealTimeChatApp\obj\Debug\net8.0\RealTimeChatApp.GeneratedMSBuildEditorConfig.editorconfig
+E:\New folder (2)\RealTimeChatApp\obj\Debug\net8.0\RealTimeChatApp.AssemblyInfoInputs.cache
+E:\New folder (2)\RealTimeChatApp\obj\Debug\net8.0\RealTimeChatApp.AssemblyInfo.cs
+E:\New folder (2)\RealTimeChatApp\obj\Debug\net8.0\RealTimeChatApp.csproj.CoreCompileInputs.cache
+E:\New folder (2)\RealTimeChatApp\obj\Debug\net8.0\RealTimeChatApp.MvcApplicationPartsAssemblyInfo.cs
+E:\New folder (2)\RealTimeChatApp\obj\Debug\net8.0\RealTimeChatApp.MvcApplicationPartsAssemblyInfo.cache
+E:\New folder (2)\RealTimeChatApp\obj\Debug\net8.0\RealTimeChatApp.RazorAssemblyInfo.cache
+E:\New folder (2)\RealTimeChatApp\obj\Debug\net8.0\RealTimeChatApp.RazorAssemblyInfo.cs
+E:\New folder (2)\RealTimeChatApp\obj\Debug\net8.0\RealTimeChatApp.sourcelink.json
 E:\New folder (2)\RealTimeChatApp\bin\Debug\net8.0\appsettings.Development.json
 E:\New folder (2)\RealTimeChatApp\bin\Debug\net8.0\appsettings.json
+E:\New folder (2)\RealTimeChatApp\bin\Debug\net8.0\libman.json
 E:\New folder (2)\RealTimeChatApp\bin\Debug\net8.0\RealTimeChatApp.staticwebassets.runtime.json
 E:\New folder (2)\RealTimeChatApp\bin\Debug\net8.0\RealTimeChatApp.exe
 E:\New folder (2)\RealTimeChatApp\bin\Debug\net8.0\RealTimeChatApp.deps.json
@@ -1095,16 +1106,6 @@ E:\New folder (2)\RealTimeChatApp\bin\Debug\net8.0\runtimes\win\lib\net7.0\Syste
 E:\New folder (2)\RealTimeChatApp\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
 E:\New folder (2)\RealTimeChatApp\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Security.Cryptography.ProtectedData.dll
 E:\New folder (2)\RealTimeChatApp\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Windows.Extensions.dll
-E:\New folder (2)\RealTimeChatApp\obj\Debug\net8.0\RealTimeChatApp.csproj.AssemblyReference.cache
-E:\New folder (2)\RealTimeChatApp\obj\Debug\net8.0\RealTimeChatApp.GeneratedMSBuildEditorConfig.editorconfig
-E:\New folder (2)\RealTimeChatApp\obj\Debug\net8.0\RealTimeChatApp.AssemblyInfoInputs.cache
-E:\New folder (2)\RealTimeChatApp\obj\Debug\net8.0\RealTimeChatApp.AssemblyInfo.cs
-E:\New folder (2)\RealTimeChatApp\obj\Debug\net8.0\RealTimeChatApp.csproj.CoreCompileInputs.cache
-E:\New folder (2)\RealTimeChatApp\obj\Debug\net8.0\RealTimeChatApp.MvcApplicationPartsAssemblyInfo.cs
-E:\New folder (2)\RealTimeChatApp\obj\Debug\net8.0\RealTimeChatApp.MvcApplicationPartsAssemblyInfo.cache
-E:\New folder (2)\RealTimeChatApp\obj\Debug\net8.0\RealTimeChatApp.RazorAssemblyInfo.cache
-E:\New folder (2)\RealTimeChatApp\obj\Debug\net8.0\RealTimeChatApp.RazorAssemblyInfo.cs
-E:\New folder (2)\RealTimeChatApp\obj\Debug\net8.0\RealTimeChatApp.sourcelink.json
 E:\New folder (2)\RealTimeChatApp\obj\Debug\net8.0\staticwebassets.build.json
 E:\New folder (2)\RealTimeChatApp\obj\Debug\net8.0\staticwebassets.development.json
 E:\New folder (2)\RealTimeChatApp\obj\Debug\net8.0\staticwebassets\msbuild.RealTimeChatApp.Microsoft.AspNetCore.StaticWebAssets.props
@@ -1121,4 +1122,3 @@ E:\New folder (2)\RealTimeChatApp\obj\Debug\net8.0\refint\RealTimeChatApp.dll
 E:\New folder (2)\RealTimeChatApp\obj\Debug\net8.0\RealTimeChatApp.pdb
 E:\New folder (2)\RealTimeChatApp\obj\Debug\net8.0\RealTimeChatApp.genruntimeconfig.cache
 E:\New folder (2)\RealTimeChatApp\obj\Debug\net8.0\ref\RealTimeChatApp.dll
-E:\New folder (2)\RealTimeChatApp\bin\Debug\net8.0\libman.json
