@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Gvid96XKMJ42P6w06/xsTNi0PrIccWCTbX9AHk1l5Og=",
+  "Hash": "uysh4WwhuoUOop3XFk4scpyX1jE9pfBptbTQ8jQYpX8=",
   "Source": "RealTimeChatApp",
   "BasePath": "_content/RealTimeChatApp",
   "Mode": "Default",
@@ -2466,6 +2466,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploads\\5ac0d703-818b-4249-9b81-d9e3e34f0ca0.docx"
+    },
+    {
+      "Identity": "E:\\New folder (2)\\RealTimeChatApp\\wwwroot\\uploads\\74d37fa8-477f-4792-a8c2-97623aa79862.docx",
+      "SourceId": "RealTimeChatApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\New folder (2)\\RealTimeChatApp\\wwwroot\\",
+      "BasePath": "_content/RealTimeChatApp",
+      "RelativePath": "uploads/74d37fa8-477f-4792-a8c2-97623aa79862.docx",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\74d37fa8-477f-4792-a8c2-97623aa79862.docx"
     },
     {
       "Identity": "E:\\New folder (2)\\RealTimeChatApp\\wwwroot\\uploads\\810116be-aed8-4d11-8919-0076b444d041.docx",

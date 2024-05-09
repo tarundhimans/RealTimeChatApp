@@ -37,8 +37,25 @@ document.getElementById("sendButton").addEventListener("click", function (event)
         formData.append("user", user);
         formData.append("message", message);
 
-        connection.invoke("SendFile", formData).catch(function (err) {
-            console.error(err.toString());
+        fetch('/Customer/File/SendFile', {
+            method: 'POST',
+            body: formData
+        }).then(response => {
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            return response.json();
+        }).then(json => {
+            if (json.success) {
+                var li = document.createElement("li");
+                var link = document.createElement("a");
+                link.textContent = `File shared by ${user}: ${json.fileName}`;
+                link.href = `/uploads/${json.fileName}`;
+                li.appendChild(link);
+                document.getElementById("messagesList").appendChild(li);
+            }
+        }).catch(e => {
+            console.error('An error occurred while sending the file: ' + e.message);
         });
     } else {
         connection.invoke("SendMessage", user, message).catch(function (err) {

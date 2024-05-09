@@ -34,9 +34,15 @@ namespace RealTimeChatApp.Areas.Customer.Controllers
         }
 
 
-            [HttpPost]
+        [HttpPost]
         public async Task<IActionResult> SendMessage(Message model, IFormFile file)
         {
+            if (file == null || file.Length == 0)
+            {
+                // Temporary error handling for debugging
+                throw new Exception("No file received by the action.");
+            }
+
             if (file != null && file.Length > 0)
             {
                 var message = new Message

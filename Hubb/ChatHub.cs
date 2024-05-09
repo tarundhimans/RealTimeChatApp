@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.SignalR;
+using Microsoft.AspNetCore.Mvc;
 
 namespace RealTimeChatApp.Hubb
 {
