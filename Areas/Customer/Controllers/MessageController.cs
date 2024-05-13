@@ -4,7 +4,10 @@ using RealTimeChatApp.Data;
 using RealTimeChatApp.Models;
 using System;
 using System.Linq;
-
+using Microsoft.AspNetCore.SignalR;
+using RealTimeChatApp.Hubb;
+using Microsoft.AspNetCore.Identity;
+using System.Security.Claims;
 
 namespace RealTimeChatApp.Areas.Customer.Controllers
 {
@@ -13,12 +16,16 @@ namespace RealTimeChatApp.Areas.Customer.Controllers
     {
         private readonly ApplicationDbContext _context;
         private readonly IWebHostEnvironment _webHostEnvironment;
+        private readonly IHubContext<ChatHub> _hubContext;
+        private readonly ILogger<MessageController> _logger;
 
 
-        public MessageController(ApplicationDbContext context, IWebHostEnvironment webHostEnvironment)
+        public MessageController(ApplicationDbContext context, IWebHostEnvironment webHostEnvironment, IHubContext<ChatHub> hubContext, ILogger<MessageController> logger)
         {
             _context = context;
             _webHostEnvironment = webHostEnvironment;
+            _hubContext = hubContext;
+            _logger = logger;
         }
 
         public IActionResult Index()
@@ -43,14 +50,29 @@ namespace RealTimeChatApp.Areas.Customer.Controllers
                 throw new Exception("No file received by the action.");
             }
 
+            _logger.LogInformation("SendMessage called with file: " + file.FileName);
+
             if (file != null && file.Length > 0)
             {
+                if (model.Text == null)
+                {
+                    model.Text = "hello1";
+                }
                 var message = new Message
                 {
                     UserId = User.Identity.Name,
                     Text = model.Text,
                     Timestamp = DateTime.Now
                 };
+
+                var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+
+                var user = _context.Users.Find(userId);
+                if (user == null)
+                {
+                    throw new Exception("User not found.");
+                }
+                message.User = (ApplicationUser)user;
 
                 var uploadsFolder = Path.Combine(_webHostEnvironment.WebRootPath, "uploads");
                 var fileName = Guid.NewGuid().ToString() + Path.GetExtension(file.FileName);
@@ -60,11 +82,20 @@ namespace RealTimeChatApp.Areas.Customer.Controllers
                 {
                     await file.CopyToAsync(stream);
                 }
-
+                message.FileBytes = await System.IO.File.ReadAllBytesAsync(filePath);
                 message.filepath = fileName;
 
                 _context.Messages.Add(message);
                 await _context.SaveChangesAsync();
+                _logger.LogInformation("File saved with path: " + filePath);
+                _logger.LogInformation("Message saved with ID: " + message.Id);
+
+                // Get the SignalR hub context
+                var hubContext = _hubContext.Clients.All;
+
+                // Send a SignalR message to all clients
+                await hubContext.SendAsync("ReceiveFile", User.Identity.Name, fileName);
+                _logger.LogInformation("SignalR message sent with file name: " + fileName);
             }
 
             return RedirectToAction("Index");

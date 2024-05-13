@@ -5,12 +5,14 @@ var connection = new signalR.HubConnectionBuilder().withUrl("/chatHub").build();
 document.getElementById("sendButton").disabled = true;
 
 connection.on("ReceiveMessage", function (user, message) {
+    console.log("ReceiveMessage called with user: " + user + ", message: " + message);
     var li = document.createElement("li");
     li.textContent = `${user} says ${message}`;
     document.getElementById("messagesList").appendChild(li);
 });
 
 connection.on("ReceiveFile", function (user, fileName) {
+    console.log("ReceiveFile called with user: " + user + ", file name: " + fileName);
     var li = document.createElement("li");
     var link = document.createElement("a");
     link.textContent = `File shared by ${user}: ${fileName}`;
@@ -36,8 +38,9 @@ document.getElementById("sendButton").addEventListener("click", function (event)
         formData.append("file", file);
         formData.append("user", user);
         formData.append("message", message);
+        console.info("Senging  message for user: " + user + ", message: " + message + ", file: " + file.fileName);
 
-        fetch('/Customer/File/SendFile', {
+        fetch('/Customer/Message/SendMessage', {
             method: 'POST',
             body: formData
         }).then(response => {
