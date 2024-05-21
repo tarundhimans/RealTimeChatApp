@@ -257,6 +257,10 @@
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
+      "Id": "E:\\New folder (2)\\RealTimeChatApp\\wwwroot\\uploads\\16cc2e7f-0705-4d47-b6a6-4fe9a357e8e9.jpg",
+      "PackagePath": "staticwebassets\\uploads\\16cc2e7f-0705-4d47-b6a6-4fe9a357e8e9.jpg"
+    },
+    {
       "Id": "E:\\New folder (2)\\RealTimeChatApp\\wwwroot\\uploads\\1c478da9-f620-4360-bd4b-3def135e6ba1.jpg",
       "PackagePath": "staticwebassets\\uploads\\1c478da9-f620-4360-bd4b-3def135e6ba1.jpg"
     },
@@ -289,6 +293,14 @@
       "PackagePath": "staticwebassets\\uploads\\a29db28a-8868-4fbc-a4c5-8a68a158f5e8.docx"
     },
     {
+      "Id": "E:\\New folder (2)\\RealTimeChatApp\\wwwroot\\uploads\\b0f15139-82ff-42a9-b5ef-bcf1047ea8a5.docx",
+      "PackagePath": "staticwebassets\\uploads\\b0f15139-82ff-42a9-b5ef-bcf1047ea8a5.docx"
+    },
+    {
+      "Id": "E:\\New folder (2)\\RealTimeChatApp\\wwwroot\\uploads\\ca6e7b90-917c-4f59-9c43-3daf898b86b0.jpg",
+      "PackagePath": "staticwebassets\\uploads\\ca6e7b90-917c-4f59-9c43-3daf898b86b0.jpg"
+    },
+    {
       "Id": "E:\\New folder (2)\\RealTimeChatApp\\wwwroot\\uploads\\db1eecdb-ecab-4014-81c5-413944ee86d3.docx",
       "PackagePath": "staticwebassets\\uploads\\db1eecdb-ecab-4014-81c5-413944ee86d3.docx"
     },
@@ -303,6 +315,14 @@
     {
       "Id": "E:\\New folder (2)\\RealTimeChatApp\\wwwroot\\uploads\\ed8c81e3-ea67-473c-92ee-b89557449fc2.jpg",
       "PackagePath": "staticwebassets\\uploads\\ed8c81e3-ea67-473c-92ee-b89557449fc2.jpg"
+    },
+    {
+      "Id": "E:\\New folder (2)\\RealTimeChatApp\\wwwroot\\uploads\\f1a8e38b-991a-42e5-b7fa-81856989a1b9.docx",
+      "PackagePath": "staticwebassets\\uploads\\f1a8e38b-991a-42e5-b7fa-81856989a1b9.docx"
+    },
+    {
+      "Id": "E:\\New folder (2)\\RealTimeChatApp\\wwwroot\\uploads\\f3f92767-aaa7-4cca-a1b3-78d673c8d7ba.docx",
+      "PackagePath": "staticwebassets\\uploads\\f3f92767-aaa7-4cca-a1b3-78d673c8d7ba.docx"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.RealTimeChatApp.Microsoft.AspNetCore.StaticWebAssets.props",

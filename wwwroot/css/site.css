@@ -20,6 +20,19 @@ html {
 body {
   margin-bottom: 60px;
 }
+.glow {
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.8), 0 0 20px rgba(0, 255, 0, 0.6), 0 0 30px rgba(0, 255, 0, 0.4);
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.btn-success {
+    /* Your existing btn-success styles */
+}
+
+.btn-danger {
+    /* Your existing btn-danger styles */
+}
+
 
 .marquee-container {
     width: 100%;

@@ -11,8 +11,7 @@ namespace RealTimeChatApp.Areas.Customer.Controllers
         [HttpPost]
         public async Task<IActionResult> SendFile(IFormFile file, string user, string message)
         {
-
-            // Your existing code for handling the file upload...
+            
             return Json(new { success = true, fileName = file.FileName });
         }
     }

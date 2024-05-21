@@ -23,8 +23,36 @@ connection.on("ReceiveFile", function (user, fileName) {
 
 connection.start().then(function () {
     document.getElementById("sendButton").disabled = false;
+
+    // Get the initial list of online users
+    connection.invoke("GetOnlineUsers").then(function (users) {
+        for (var i = 0; i < users.length; i++) {
+            var li = document.createElement("li");
+            li.textContent = users[i];
+            li.id = `user-${users[i]}`;
+            document.getElementById("onlineUsersList").appendChild(li);
+        }
+    });
 }).catch(function (err) {
     console.error(err.toString());
+});
+
+connection.on("UserConnected", function (user) {
+    console.log("User connected: " + user);
+
+    var li = document.createElement("li");
+    li.textContent = user;
+    li.id = `user-${user}`; 
+    document.getElementById("onlineUsersList").appendChild(li);
+});
+
+connection.on("UserDisconnected", function (user) {
+    console.log("User disconnected: " + user);
+
+    var li = document.getElementById(`user-${user}`);
+    if (li) {
+        li.parentNode.removeChild(li);
+    }
 });
 
 document.getElementById("sendButton").addEventListener("click", function (event) {

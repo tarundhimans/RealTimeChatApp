@@ -13,23 +13,19 @@ namespace RealTimeChatApp.Areas.Customer.Controllers
         {
             _logger = logger;
         }
-
         public IActionResult Index()
-        {
+        {   
             if (!User.Identity.IsAuthenticated)
             {
                
                 return Redirect("/Identity/Account/Login");
-            }
-           
+            }           
             return View("Index");
         }
-
         public IActionResult Privacy()
         {
             return View();
         }
-
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
